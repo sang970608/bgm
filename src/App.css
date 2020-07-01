@@ -1,0 +1,44 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+nav {
+  background: #0082e6;
+  height: 80px;
+  width: 100%;
+}
+label.logo{
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li .menu{
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 7 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.active{
+  background: black;
+  transition: .5s;
+}
+h1{
+  margin: 0 100px;
+  padding-top: 20px;
+}
