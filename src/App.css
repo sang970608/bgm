@@ -42,3 +42,6 @@ h1{
   margin: 0 100px;
   padding-top: 20px;
 }
+.wrap{
+  display: fl;
+}

@@ -1,19 +1,42 @@
 import React from 'react';
 import './App.css';
+import PropTypes from 'prop-types'
 import {Route, Switch, NavLink} from 'react-router-dom';
 
+const strengthBgm = [{
+  name : "Tales of the Electric Romeo",
+  id : "https://www.youtube.com/embed/88lTopK49C0?autohide=1&color=white&fs=0&loop=1&playlist=88lTopK49C0&rel=0&theme=light",
+  index : 1
+},{
+  name: "power up",
+  id : "https://www.youtube.com/embed/VEzyhRki1gY?autohide=1&color=white&fs=0&loop=1&playlist=VEzyhRki1gY&rel=0&theme=light",
+  index : 2}]
+
+  function Frame({name, id}) { //props를 {}로 안감싸면 Uncaught Invariant Violation에러가 생김
+    return(
+      <div className="wrap">
+        <h3>{name}</h3>
+        <iframe title={name} width="560" height="315" src={id} allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    )
+  }
+  
+  Frame.propTypes = {
+    name : PropTypes.string.isRequired,
+    id : PropTypes.string.isRequired,
+    index : PropTypes.number.isRequired  
+  }
+
 function Strength() {
-
-  const strength_bgm = [{
-    name : "I feel crazy",
-    link : "https://youtu.be/D0Tqkrnmwc8",
-    poster : "/I feel crazy.jsp"
-  }]
-
   return(
     <div>
       <h1>강화브금</h1>
-      <img src="I feel crazy.jpg" alt="crazy"/>
+      {strengthBgm.map(bgm => (<Frame 
+      name={bgm.name}
+      poster={bgm.image}
+      id={bgm.id}
+      key={bgm.index}
+       />))}
     </div>
   )
 }
