@@ -39,9 +39,15 @@ nav ul li .menu{
   transition: .5s;
 }
 h1{
-  margin: 0 100px;
-  padding-top: 20px;
+  text-align: center;
+  background-color: red;
+  color: white;
 }
-.wrap{
-  display: fl;
+.feed{
+  text-align: center;
+}
+.error{
+  color: red;
+  text-align: center;
+  height: 30%;
 }

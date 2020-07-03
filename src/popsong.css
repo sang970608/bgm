@@ -1,0 +1,9 @@
+h3{
+    margin-top: 50px;
+  }
+.popBgm{
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+padding: 50px;
+}
